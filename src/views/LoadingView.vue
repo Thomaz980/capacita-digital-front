@@ -1,23 +1,15 @@
 <script setup>
+import { onMounted } from 'vue';
+import { useRouter } from 'vue-router';
 import Curuja from '../components/Curuja.vue';
 
-// function barraProgresso () {
-//     var barra = document.getElementById('barra2');
-     
-//     for ( var tamanho = 20; tamanho <= 320; tamanho + 20) {
-//         barra.style.width = tamanho + 'px';
-//     }
-       
-// }
+const router = useRouter();
 
-// setTimeout(barraProgresso, 1000)
-
-
-function redirect () {
-    window.location = "/home";
-}
-
-setTimeout(redirect, 3000);
+onMounted(() => {
+  setTimeout(() => {
+    router.push('/home');
+  }, 3000);
+});
 
 </script>
 
