@@ -1,4 +1,12 @@
 <script setup>
+import { onMounted } from 'vue';
+import { converterTextoParaVoz } from "../assets/js/voz.js"; 
+
+const texto = "Click no botão azul para iniciar o aprendizado";
+
+onMounted(() => {
+  converterTextoParaVoz(texto);
+});
 
 </script>
 

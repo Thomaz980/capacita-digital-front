@@ -1,14 +1,21 @@
 <script setup>
+import Curuja from '../components/Curuja.vue';
 import { onMounted } from 'vue';
 import { useRouter } from 'vue-router';
-import Curuja from '../components/Curuja.vue';
+import { converterTextoParaVoz } from '../assets/js/voz.js'; 
+
+const texto = "Seja bem vindo, É um prazer tê-lo aqui para juntos aprendermos, sobre muitas áreas do conhecimento";
+
+onMounted(() => {
+  converterTextoParaVoz(texto);
+});
 
 const router = useRouter();
 
 onMounted(() => {
   setTimeout(() => {
     router.push('/home');
-  }, 3000);
+  }, 8000);
 });
 
 </script>
